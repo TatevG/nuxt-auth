@@ -6,15 +6,19 @@
         :timeout="timeout"
         top
     >
-        {{ text }}
+        <span>
+            {{ text }}
+        </span>
 
-        <v-btn
-            dark
-            text
-            @click="close"
-        >
-            Close
-        </v-btn>
+        <template v-slot:action="{ attrs }">
+            <v-btn
+                text
+                v-bind="attrs"
+                @click="close"
+            >
+                Close
+            </v-btn>
+        </template>
     </v-snackbar>
 </template>
 <script>

@@ -19,7 +19,7 @@ export const actions = {
             else {
                 dispatch('snackbar/openSnackbar', {
                     status: 'error',
-                    text: 'wrong username or password',
+                    text: 'Wrong username or password',
                     timeout: 6000,
                 }, { root: true })
             }
