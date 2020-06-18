@@ -71,20 +71,21 @@ export default {
     },
 
     computed: {
-    ...mapState('auth', ['authUser']),
+    ...mapState('login', ['loginUser']),
     },
 
     methods: {
         ...mapActions({
-            login: 'auth/login'
+            login: 'login/login'
         }),
-        userLogin() {
+        userLogin(loginInfo) {
             this.login({
                 username: this.username,
                 password: this.password
             })
-            if(this.authUser) {
-                console.log('user successfully logged in');
+            if(this.loginUser) {
+                console.log(this.$nuxt.$router);
+                this.$nuxt.$router.replace({ path: '/dashboard' });
             }
         }
     },

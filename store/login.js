@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 export const state = () => ({
-    authUser: null
+    loginUser: null
 })
 
 export const mutations = {
     SET_USER (state, user) {
-        state.authUser = user
+        state.loginUser = user
     }
 }
 

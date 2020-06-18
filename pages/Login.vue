@@ -1,5 +1,5 @@
 <template>
-    <v-app id="inspire" class="nuxt-page-login">
+    <v-app class="nuxt-page-login">
         <v-main>
             <v-container
                 class="fill-height"
