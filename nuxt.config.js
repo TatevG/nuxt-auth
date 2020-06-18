@@ -50,6 +50,10 @@ export default {
     ** Nuxt.js modules
     */
     modules: [
+    /*
+    ** axios usage documentation
+    ** https://axios.nuxt.orh/usage
+    */
         '@nuxtjs/axios',
         '@nuxtjs/auth',
     ],
@@ -60,7 +64,7 @@ export default {
     vuetify: {
         customVariables: [ '~/assets/variables.scss' ],
         theme: {
-            dark: true,
+            dark: false,
             themes: {
                 dark: {
                     primary: colors.blue.darken2,
