@@ -33,6 +33,8 @@ export default {
         LineChart,
         PieChart,
     },
+
+    middleware: 'login',
 };
 </script>
 
