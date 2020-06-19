@@ -2,7 +2,13 @@
     <div class="nuxt-component-charts-random">
         <LineChart :chart-data="datacollection"></LineChart>
 
-        <button @click="randomizeData()">Change Data</button>
+        <v-btn
+            class="ma-2"
+            color="info"
+            @click="randomizeData()"
+        >
+            Change data
+        </v-btn>
     </div>
 </template>
 

@@ -1,9 +1,17 @@
 <template>
     <div class="nuxt-component-charts-random">
         <Bar :chart-data="datacollection"></Bar>
-        <button @click="randomizeData()">Change Data</button>
+
+        <v-btn
+            class="ma-2"
+            color="info"
+            @click="randomizeData()"
+        >
+            Change data
+        </v-btn>
     </div>
 </template>
+
 <script>
 import Bar from './charts/Bar'
 
