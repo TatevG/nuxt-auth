@@ -1,6 +1,6 @@
 # nuxt-auth
 
-> My supreme Nuxt.js project
+> Nuxt.js authentication and charts.js
 
 ## Build Setup
 
@@ -27,6 +27,14 @@ $ username: admin
 $ password: admin
 
 ```
+
+## Additional Information about used technologies
+
+```bash
+# For more information about Chart.js visit
+# https://www.chartjs.org/
+# For more information about Chart.js usage in Vue project visit
+# https://vue-chartjs.org/
 
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

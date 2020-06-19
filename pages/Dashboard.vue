@@ -1,24 +1,47 @@
 <template>
     <v-layout class="nuxt-page-dashboard">
-        <v-flex class="text-center">
-            <img
-                src="/v.png"
-                alt="Vuetify.js"
-                class="mb-5"
-            >
-            <blockquote class="blockquote">
-                &#8220;First, solve the problem. Then, write the code.&#8221;
-                <footer>
-                    <small>
-                        <em>&mdash;John Johnson</em>
-                    </small>
-                </footer>
-            </blockquote>
-        </v-flex>
+        <div class="nuxt-page-dashboard__chart">
+            <AreaChart/>
+        </div>
+
+        <div class="nuxt-page-dashboard__chart">
+            <PieChart />
+        </div>
+
+        <div class="nuxt-page-dashboard__chart">
+            <LineChart />
+        </div>
+
+        <div class="nuxt-page-dashboard__chart">
+            <BarChart />
+        </div>
     </v-layout>
 </template>
+
 <script>
+import AreaChart from '~/components/AreaChart';
+import BarChart from '~/components/BarChart';
+import LineChart from '~/components/LineChart';
+import PieChart from '~/components/PieChart';
+
 export default {
     name: 'nuxt-page-dashboard',
+
+    components: {
+        AreaChart,
+        BarChart,
+        LineChart,
+        PieChart,
+    },
 }
 </script>
+
+<style lang="scss">
+.nuxt-page-dashboard {
+    flex-direction: column;
+
+    &__chart {
+        margin-bottom: 100px;
+    }
+}
+</style>

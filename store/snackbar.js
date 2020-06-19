@@ -2,7 +2,8 @@ export const state = () => ({
     open: false,
     text: '',
     status: 'notification',
-    timeout: 3000,  })
+    timeout: 3000,
+});
 
 export const mutations = {
     SET_SNACKBAR_OPEN(state, open) {

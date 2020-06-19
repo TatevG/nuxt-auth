@@ -1,14 +1,12 @@
-import axios from 'axios'
-
 export const state = () => ({
-    loginUser: null
-})
+    loginUser: null,
+});
 
 export const mutations = {
     SET_USER (state, user) {
-        state.loginUser = user
-    }
-}
+        state.loginUser = user;
+    },
+};
 
 export const actions = {
     login ({ commit, dispatch }, data) {
@@ -21,20 +19,11 @@ export const actions = {
                     status: 'error',
                     text: 'Wrong username or password',
                     timeout: 6000,
-                }, { root: true })
+                }, { root: true });
             }
         }
         catch (error) {
-            if (error.response && error.response.status === 401) {
-                throw new Error('Bad credentials')
-            }
-            throw error
+            console.log(error);
         }
     },
-
-    async logout ({ commit }) {
-        await axios.post('/api/logout')
-        commit('SET_USER', null)
-    }
-
 }

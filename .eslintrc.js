@@ -299,22 +299,6 @@ module.exports = {
             },
         ],
 
-        'vue/component-definition-name-casing': [
-            'error',
-            'kebab-case',
-        ],
-
-        'vue/component-tags-order': [
-            'error',
-            {
-                order: [
-                    'template',
-                    'script',
-                    'style',
-                ],
-            },
-        ],
-
         'vue/html-closing-bracket-newline': [
             'error',
             {
@@ -356,11 +340,6 @@ module.exports = {
                     allowFirstLine: false,
                 },
             },
-        ],
-
-        'vue/mustache-interpolation-spacing': [
-            'error',
-            'always',
         ],
 
         'vue/order-in-components': [
@@ -420,116 +399,6 @@ module.exports = {
                     'renderError',
                 ],
             },
-        ],
-
-        'vue/padding-line-between-blocks': [
-            'error',
-            'always',
-        ],
-
-        'vue/prop-name-casing': [
-            'error',
-            'camelCase',
-        ],
-
-        'vue/singleline-html-element-content-newline': [
-            'error',
-            {
-                ignoreWhenNoAttributes: true,
-                ignoreWhenEmpty: true,
-            },
-        ],
-
-        'vue/this-in-template': [
-            'error',
-            'never',
-        ],
-
-        'vue/v-bind-style': [
-            'error',
-            'shorthand',
-        ],
-
-        'vue/v-on-style': [
-            'error',
-            'shorthand',
-        ],
-
-        // // ESLint rules for imports
-        // Source https://github.com/benmosher/eslint-plugin-import
-        'import/default': 'error',
-
-        'import/dynamic-import-chunkname': [
-            'error',
-            {
-                importFunctions: [ 'dynamicImport' ],
-                // To configure the regex format you'd like to accept for the webpackChunkName
-                webpackChunknameFormat: '[a-zA-Z0-57-9-/_]+',
-            },
-        ],
-
-        'import/export': 'warn',
-        'import/first': 'error',
-
-        'import/newline-after-import': [
-            'error',
-            { count: 1 },
-        ],
-
-        'import/no-cycle': [
-            'error',
-            { ignore: [ '/node_modules/' ] },
-        ],
-
-        'import/no-unresolved': [
-            'error',
-            {
-                commonjs: true,
-                amd: true,
-            },
-        ],
-
-        'import/no-deprecated': 'warn',
-        'import/no-mutable-exports': 'warn',
-        'import/no-self-import': 'error',
-
-        'import/no-unused-modules': [
-            'warn',
-            {
-                unusedExports: true,
-
-                ignoreExports: [
-                    '**/*.vue',
-                    './src/store/modules/**',
-                ],
-            },
-        ],
-
-        'import/order': [
-            'error',
-            {
-                groups: [
-                    'builtin',
-                    'external',
-                    'internal',
-                    'parent',
-                    'sibling',
-                    'index',
-                ],
-
-                'newlines-between': 'always',
-
-                alphabetize: {
-                    order: 'asc',
-                    caseInsensitive: true,
-                },
-            },
-        ],
-
-        'ext/lines-between-object-properties': [
-            'error',
-            'always',
-            { exceptBetweenSingleLines: true },
         ],
     },
 

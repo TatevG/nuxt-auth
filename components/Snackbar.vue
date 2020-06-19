@@ -21,6 +21,7 @@
         </template>
     </v-snackbar>
 </template>
+
 <script>
 import { mapState, mapActions } from 'vuex'
 
@@ -30,13 +31,13 @@ export default {
     data() {
         return {
             snackbarOpen: false,
-            color: ''
+            color: '',
         }
     },
 
     computed: {
     ...mapState('snackbar', ['open', 'text', 'status', 'timeout']),
-  },
+    },
 
     watch: {
         open: {
@@ -46,6 +47,7 @@ export default {
                 this.snackbarOpen = newVal;
             },
         },
+
         snackbarOpen(newValue) {
             if(!newValue) this.closeSnackbar();
         },
@@ -55,6 +57,7 @@ export default {
         ...mapActions({
             closeSnackbar: 'snackbar/closeSnackbar',
         }),
+
         close() {
             this.snackbarOpen = false;
         }

@@ -78,16 +78,16 @@ export default {
         ...mapActions({
             login: 'login/login'
         }),
+
         userLogin(loginInfo) {
             this.login({
                 username: this.username,
-                password: this.password
+                password: this.password,
             })
             if(this.loginUser) {
-                console.log(this.$nuxt.$router);
                 this.$nuxt.$router.replace({ path: '/dashboard' });
             }
-        }
+        },
     },
 }
 </script>

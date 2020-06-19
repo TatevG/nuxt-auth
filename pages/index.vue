@@ -1,25 +1,25 @@
 <template>
-<div class="nuxt-page-main">
-    <div v-if="$auth.loggedIn">
-        <Dashboard/>
+    <div class="nuxt-page-main">
+        <div v-if="$auth.loggedIn">
+            <Dashboard/>
+        </div>
+
+        <div v-else>
+            <Login />
+        </div>
+
+        <Snackbar />
     </div>
-
-    <div v-else>
-        <Login />
-    </div>
-
-    <Snackbar />
-</div>
-
 </template>
 
 <script>
-import Dashboard from './Dashboard.vue';
-import Login from './Login.vue';
-import Snackbar from '~/components/Snackbar.vue';
+import Dashboard from './Dashboard';
+import Login from './Login';
+import Snackbar from '~/components/Snackbar';
 
 export default {
     name: 'nuxt-page-main',
+
     components: {
         Dashboard,
         Login,
