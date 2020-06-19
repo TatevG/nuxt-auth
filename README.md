@@ -32,9 +32,16 @@ $ password: admin
 
 ```bash
 # For more information about Chart.js visit
-# https://www.chartjs.org/
+[Chart.js](https://www.chartjs.org/)
 # For more information about Chart.js usage in Vue project visit
-# https://vue-chartjs.org/
+[vue-chartjs](https://vue-chartjs.org/)
+
+# For CSS styles I use SCSS and BEM Methodology
+[SCSS](https://sass-lang.com/documentation)
+[BEM Methodology](https://en.bem.info/methodology/css/)
+
+
+
 
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
