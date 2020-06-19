@@ -32,8 +32,6 @@ $ password: admin
 
 [Vue.js](https://vuejs.org/)
 
-[Nuxt.js](https://nuxtjs.org/guide)
-
 [Nuxt.js auth module](https://auth.nuxtjs.org/)
 
 [Vue Chart](https://vue-chartjs.org/)
@@ -45,12 +43,5 @@ $ password: admin
 [SCSS](https://sass-lang.com/documentation)
 
 [BEM Methodology](https://en.bem.info/methodology/css/)
-
-
-
-
-
-
-
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
