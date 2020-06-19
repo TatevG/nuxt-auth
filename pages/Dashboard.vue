@@ -1,5 +1,7 @@
 <template>
     <v-layout class="nuxt-page-dashboard">
+        <Hint/>
+
         <div class="nuxt-page-dashboard__chart">
             <AreaChart/>
         </div>
@@ -23,6 +25,7 @@ import AreaChart from '~/components/AreaChart';
 import BarChart from '~/components/BarChart';
 import LineChart from '~/components/LineChart';
 import PieChart from '~/components/PieChart';
+import Hint from '~/components/Hint';
 
 export default {
     name: 'NuxtPageDashboard',
@@ -30,6 +33,7 @@ export default {
     components: {
         AreaChart,
         BarChart,
+        Hint,
         LineChart,
         PieChart,
     },
