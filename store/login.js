@@ -9,6 +9,8 @@ export const mutations = {
 };
 
 export const actions = {
+    // login action isn't async because data, which I want to represent
+    // is not response of some request
     login ({ commit, dispatch }, data) {
         try {
             if(data.username === 'admin' && data.password === 'admin') {
