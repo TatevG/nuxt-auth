@@ -30,11 +30,24 @@ $ password: admin
 
 ## Additional Information about used technologies
 
+[Vue.js](https://vuejs.org/)
+
+[Nuxt.js](https://nuxtjs.org/guide)
+
+[Nuxt.js auth module](https://auth.nuxtjs.org/)
+
+[Vue Chart](https://vue-chartjs.org/)
+
 [Chart.js](https://www.chartjs.org/)
-[vue-chartjs](https://vue-chartjs.org/)
+
+[Vuetify](https://vuetifyjs.com/en/getting-started/quick-start/)
 
 [SCSS](https://sass-lang.com/documentation)
+
 [BEM Methodology](https://en.bem.info/methodology/css/)
+
+
+
 
 
 
