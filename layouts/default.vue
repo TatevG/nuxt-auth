@@ -5,13 +5,13 @@
     >
         <v-main>
             <v-container>
-                <nuxt />
+                <nuxt/>
             </v-container>
         </v-main>
 
         <v-footer
-            :fixed="fixed"
             app
+            :fixed="fixed"
         >
             <span>&copy; {{ new Date().getFullYear() }}</span>
         </v-footer>
@@ -20,12 +20,10 @@
 
 <script>
 export default {
-    name: 'nuxt-layout-default',
+    name: 'NuxtLayoutDefault',
 
     data() {
-        return {
-            fixed: false,
-        };
+        return { fixed: false };
     },
 };
 </script>

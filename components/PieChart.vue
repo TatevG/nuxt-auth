@@ -2,7 +2,7 @@
 import { Pie } from 'vue-chartjs';
 
 export default {
-    name: 'nuxt-component-pie-chart',
+    name: 'NuxtComponentPieChart',
 
     extends: Pie,
 
@@ -34,19 +34,25 @@ export default {
                 'Data Three',
             ],
 
-            datasets: [{
-                backgroundColor: [
-                    this.gradient,
-                    this.gradient2,
-                    this.gradient3,
-                ],
-                data: [ 40, 20, 10 ],
-            }]
+            datasets: [
+                {
+                    backgroundColor: [
+                        this.gradient,
+                        this.gradient2,
+                        this.gradient3,
+                    ],
+                    data: [
+                        40,
+                        20,
+                        10,
+                    ],
+                },
+            ],
         },
         {
             responsive: true,
             maintainAspectRatio: false,
         });
-    }
+    },
 };
 </script>

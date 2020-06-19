@@ -1,9 +1,7 @@
-export const state = () => ({
-    loginUser: null,
-});
+export const state = () => ({ loginUser: null });
 
 export const mutations = {
-    SET_USER (state, user) {
+    SET_USER(state, user) {
         state.loginUser = user;
     },
 };
@@ -11,7 +9,7 @@ export const mutations = {
 export const actions = {
     // login action isn't async because data, which I want to represent
     // is not response of some request
-    login ({ commit, dispatch }, data) {
+    login({ commit, dispatch }, data) {
         try {
             if(data.username === 'admin' && data.password === 'admin') {
                 commit('SET_USER', data);
@@ -28,4 +26,4 @@ export const actions = {
             console.log(error);
         }
     },
-}
+};

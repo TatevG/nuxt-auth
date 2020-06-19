@@ -5,10 +5,10 @@
         </div>
 
         <div v-else>
-            <Login />
+            <Login/>
         </div>
 
-        <Snackbar />
+        <Snackbar/>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ import Login from './Login';
 import Snackbar from '~/components/Snackbar';
 
 export default {
-    name: 'nuxt-page-main',
+    name: 'NuxtPageMain',
 
     components: {
         Dashboard,

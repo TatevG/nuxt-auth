@@ -5,15 +5,15 @@
         </div>
 
         <div class="nuxt-page-dashboard__chart">
-            <PieChart />
+            <PieChart/>
         </div>
 
         <div class="nuxt-page-dashboard__chart">
-            <LineChart />
+            <LineChart/>
         </div>
 
         <div class="nuxt-page-dashboard__chart">
-            <BarChart />
+            <BarChart/>
         </div>
     </v-layout>
 </template>
@@ -25,7 +25,7 @@ import LineChart from '~/components/LineChart';
 import PieChart from '~/components/PieChart';
 
 export default {
-    name: 'nuxt-page-dashboard',
+    name: 'NuxtPageDashboard',
 
     components: {
         AreaChart,
@@ -33,7 +33,7 @@ export default {
         LineChart,
         PieChart,
     },
-}
+};
 </script>
 
 <style lang="scss">

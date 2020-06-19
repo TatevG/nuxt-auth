@@ -1,7 +1,7 @@
 <template>
     <v-snackbar
-        class="nuxt-component-snackbar"
         v-model="snackbarOpen"
+        class="nuxt-component-snackbar"
         :color="status"
         :timeout="timeout"
         top
@@ -12,8 +12,8 @@
 
         <template v-slot:action="{ attrs }">
             <v-btn
-                text
                 v-bind="attrs"
+                text
                 @click="close"
             >
                 Close
@@ -23,20 +23,27 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import {
+    mapState, mapActions,
+} from 'vuex';
 
 export default {
-    name: 'nuxt-component-snackbar',
+    name: 'NuxtComponentSnackbar',
 
     data() {
         return {
             snackbarOpen: false,
             color: '',
-        }
+        };
     },
 
     computed: {
-    ...mapState('snackbar', ['open', 'text', 'status', 'timeout']),
+        ...mapState('snackbar', [
+            'open',
+            'text',
+            'status',
+            'timeout',
+        ]),
     },
 
     watch: {
@@ -54,13 +61,11 @@ export default {
     },
 
     methods: {
-        ...mapActions({
-            closeSnackbar: 'snackbar/closeSnackbar',
-        }),
+        ...mapActions({ closeSnackbar: 'snackbar/closeSnackbar' }),
 
         close() {
             this.snackbarOpen = false;
-        }
-    }
-}
+        },
+    },
+};
 </script>

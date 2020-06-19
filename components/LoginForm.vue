@@ -1,16 +1,15 @@
 <template>
     <v-row
-        class="nuxt-component-login-form"
         align="center"
+        class="nuxt-component-login-form"
         justify="center"
     >
         <v-col
             cols="12"
-            sm="8"
             md="4"
+            sm="8"
         >
             <v-card class="elevation-12">
-
                 <v-toolbar
                     color="primary"
                     dark
@@ -26,24 +25,24 @@
                             label="Login"
                             name="login"
                             prepend-icon="mdi-account"
-                            type="text"
                             :rules="rules"
-                        ></v-text-field>
+                            type="text"
+                        />
 
                         <v-text-field
-                            v-model="password"
                             id="password"
+                            v-model="password"
                             label="Password"
                             name="password"
                             prepend-icon="mdi-lock"
-                            type="password"
                             :rules="rules"
-                        ></v-text-field>
+                            type="password"
+                        />
                     </v-form>
                 </v-card-text>
 
                 <v-card-actions>
-                    <v-spacer></v-spacer>
+                    <v-spacer/>
 
                     <v-btn
                         color="primary"
@@ -58,36 +57,35 @@
     </v-row>
 </template>
 <script>
-import { mapActions, mapState } from 'vuex'
+import {
+    mapActions, mapState,
+} from 'vuex';
 export default {
-    name: 'nuxt-component-login-form',
+    name: 'NuxtComponentLoginForm',
 
     data() {
         return {
             username: '',
             password: '',
             rules: [ value => !!value || 'this field is required' ],
-        }
+        };
     },
 
-    computed: {
-    ...mapState('login', ['loginUser']),
-    },
+    computed: { ...mapState('login', [ 'loginUser' ]) },
 
     methods: {
-        ...mapActions({
-            login: 'login/login'
-        }),
+        ...mapActions({ login: 'login/login' }),
 
-        userLogin(loginInfo) {
+        userLogin() {
             this.login({
                 username: this.username,
                 password: this.password,
-            })
+            });
+
             if(this.loginUser) {
                 this.$nuxt.$router.replace({ path: '/dashboard' });
             }
         },
     },
-}
+};
 </script>

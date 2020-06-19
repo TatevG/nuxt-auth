@@ -1,6 +1,6 @@
 <template>
     <div class="nuxt-component-charts-random">
-        <LineChart :chart-data="datacollection"></LineChart>
+        <LineChart :chart-data="datacollection"/>
 
         <v-btn
             class="ma-2"
@@ -16,52 +16,60 @@
 import LineChart from './charts/Line';
 
 export default {
-    name: 'nuxt-component-line-chart',
+    name: 'NuxtComponentLineChart',
 
-    components: {
-        LineChart,
+    components: { LineChart },
+
+    data() {
+        return { datacollection: null };
     },
 
-    data () {
-        return {
-            datacollection: null,
-        }
-    },
-
-    mounted () {
+    mounted() {
         this.randomizeData();
     },
 
     methods: {
-        randomizeData () {
+        randomizeData() {
             this.datacollection = {
-                labels: [ 'Started', 'Ended' ],
+                labels: [
+                    'Started',
+                    'Ended',
+                ],
 
                 datasets: [
                     {
                         label: 'Data One',
                         backgroundColor: '#F44336',
-                        data: [this.getRandomInt(), this.getRandomInt()]
+                        data: [
+                            this.getRandomInt(),
+                            this.getRandomInt(),
+                        ],
                     },
                     {
                         label: 'Data Two',
                         backgroundColor: '#2196F3',
-                        data: [this.getRandomInt(), this.getRandomInt()]
+                        data: [
+                            this.getRandomInt(),
+                            this.getRandomInt(),
+                        ],
                     },
                     {
                         label: 'Data Three',
                         backgroundColor: '#FFCA22',
-                        data: [this.getRandomInt(), this.getRandomInt()]
-                    }
+                        data: [
+                            this.getRandomInt(),
+                            this.getRandomInt(),
+                        ],
+                    },
                 ],
-            }
+            };
         },
 
-        getRandomInt () {
+        getRandomInt() {
             return Math.floor(Math.random() * (100 - 10 + 1));
-        }
-    }
-}
+        },
+    },
+};
 </script>
 
 <style lang="scss">

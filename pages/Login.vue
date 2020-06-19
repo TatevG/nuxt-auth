@@ -15,10 +15,8 @@
 import LoginForm from '~/components/LoginForm.vue';
 
 export default {
-    name: 'nuxt-page-login',
+    name: 'NuxtPageLogin',
 
-    components: {
-        LoginForm,
-    }
-}
+    components: { LoginForm },
+};
 </script>

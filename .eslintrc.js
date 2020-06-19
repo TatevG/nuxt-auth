@@ -2,18 +2,19 @@ module.exports = {
     root: true,
     env: {
         browser: true,
+        jest: true,
         node: true,
     },
 
     extends: [
         //'@nuxtjs',
-        //'plugin:nuxt/recommended',
+        // 'plugin:nuxt/recommended',
         'plugin:vue/recommended',
         'plugin:vue/essential',
         'eslint:recommended',
     ],
 
-    plugins: [ 'ext', 'vue' ],
+    plugins: [ 'vue' ],
 
     rules: {
         // ESLint rules for JavaScript
@@ -403,13 +404,6 @@ module.exports = {
     },
 
     parserOptions: { parser: 'babel-eslint' },
-
-    overrides: [
-        {
-            files: [ '**/__tests__/*.{j,t}s?(x)' ],
-            env: { mocha: true },
-        },
-    ],
 
     settings: {
         'import/extensions': [
