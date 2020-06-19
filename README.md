@@ -30,13 +30,9 @@ $ password: admin
 
 ## Additional Information about used technologies
 
-```bash
-# For more information about Chart.js visit
 [Chart.js](https://www.chartjs.org/)
-# For more information about Chart.js usage in Vue project visit
 [vue-chartjs](https://vue-chartjs.org/)
 
-# For CSS styles I use SCSS and BEM Methodology
 [SCSS](https://sass-lang.com/documentation)
 [BEM Methodology](https://en.bem.info/methodology/css/)
 
