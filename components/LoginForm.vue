@@ -73,6 +73,16 @@ export default {
 
     computed: { ...mapState('login', [ 'loginUser' ]) },
 
+    //add eventListeners to handle login when press 'Enter'
+
+    created() {
+        window.addEventListener('keydown', this.handleKeyDown);
+    },
+
+    destroyed() {
+        window.removeEventListener('keydown', this.handleKeyDown);
+    },
+
     methods: {
         ...mapActions({ login: 'login/login' }),
 
@@ -84,6 +94,12 @@ export default {
 
             if(this.loginUser) {
                 this.$nuxt.$router.replace({ path: '/dashboard' });
+            }
+        },
+
+        handleKeyDown(e) {
+            if(e.code === 'Enter') {
+                this.userLogin();
             }
         },
     },

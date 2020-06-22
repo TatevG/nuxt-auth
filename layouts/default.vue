@@ -19,6 +19,11 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import randomizers from '~/mixins/randomizers.js';
+
+Vue.mixin(randomizers);
+
 export default {
     name: 'NuxtLayoutDefault',
 
